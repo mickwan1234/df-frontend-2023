@@ -8,6 +8,25 @@ function closeAddBookPopup() {
     popup.classList.remove("open-popup");
 }
 
+function initData() {
+    let books = [
+        {
+            id: 1,
+            name: "The Alchemist",
+            author: "Paulo Coelho"
+        },
+        {
+            id: 2,
+            name: "The Monk Who Sold His Ferrari",
+            author: "Robin Sharma"
+        },
+        {
+            id: 3,
+            name: "The Power of Your Subconscious Mind",
+            author: "Joseph Murphy"
+        }]
+    localStorage.setItem('books', JSON.stringify(books));
+}
 function saveBook(id, name, author, topic) {
     const books = JSON.parse(localStorage.getItem('books')) || [];
     const book = { id, name, author, topic };
@@ -108,6 +127,9 @@ document.querySelector('#search-bar').addEventListener('keyup', function (event)
     renderBooks(booksSearchList);
 });
 document.addEventListener('DOMContentLoaded', function () {
+    if(localStorage.getItem('books') === null) {
+        initData();
+    }
     renderBooks(JSON.parse(localStorage.getItem('books')) || [])
 });
 
