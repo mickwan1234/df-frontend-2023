@@ -13,17 +13,20 @@ function initData() {
         {
             id: 1,
             name: "The Alchemist",
-            author: "Paulo Coelho"
+            author: "Paulo Coelho",
+            topic: "Fiction"
         },
         {
             id: 2,
             name: "The Monk Who Sold His Ferrari",
-            author: "Robin Sharma"
+            author: "Robin Sharma",
+            topic: "Non-Fiction"
         },
         {
             id: 3,
             name: "The Power of Your Subconscious Mind",
-            author: "Joseph Murphy"
+            author: "Joseph Murphy",
+            topic: "Non-Fiction"
         }]
     localStorage.setItem('books', JSON.stringify(books));
 }
