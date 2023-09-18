@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="us-en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
@@ -8,7 +8,44 @@
   </head>
 
   <body>
-    Hello world
+  <div id="header">
+    <table class="header-table">
+      <tr>
+        <td id="logo"><h1>Bookstore</h1></td>
+        <td id="picture-frame"><img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_640.png" id="profile-picture" alt="user avatar"> </td>
+        <td id="profile">John Doe</td>
+      </tr>
+    </table>
+  </div>
+  <div id="search-area">
+    <input type="text" id="search-bar" placeholder="Search books">
+    <button id="add-button" onclick="openAddBookPopup()">Add Book</button>
+    <div class="add-book-popup" id="add-book-popup">
+        <span class="close" onclick="closeAddBookPopup()">&times;</span>
+        <div class="add-book-popup-content">
+            <form id="add-book-form">
+            <label for="book-name">Book Name</label>
+            <input type="text" id="book-name" name="bookName" placeholder="Book Name" required>
+            <label for="author-name">Author Name</label>
+            <input type="text" id="author-name" name="authorName" placeholder="Author Name" required>
+            <label for="topic">Topic</label>
+            <input type="text" id="topic" name="topic" placeholder="Topic" required>
+            <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+  </div>
+  <div id="book-list">
+  <table class="book-table" id="book-table">
+    <tr id="table-header">
+      <th>Name</th>
+      <th>Author</th>
+      <th>Topic</th>
+      <th>Action</th>
+    </tr>
+  </table>
+      <div id="modal-section"></div>
+  </div>
     <script src="script.js"></script>
   </body>
 </html>
