@@ -71,7 +71,6 @@ document.querySelector('#add-book-form').addEventListener('submit', function (ev
     // Clear the form fields
     document.querySelector('#book-name').value = '';
     document.querySelector('#author-name').value = '';
-    document.querySelector('#topic').value = '';
     closeAddBookPopup()
 });
 
